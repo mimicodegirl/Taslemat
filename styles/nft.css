@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: conic-gradient(from 180deg at 50% 50%, #ffd4f6 -31.88deg, #d8f8ff 63.75deg,
+    #ffd4f6 116.25deg, #d8f8ff 255deg, #ffd4f6 328.12deg, #d8f8ff 423.75deg);
+    transition: 0.4s;
+    font-family: 'Radio Canada', sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.logo{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    color: #000;
+    text-shadow:
+  0 1px #808d93,
+  -1px 0 #cdd2d5,
+  -1px 2px #808d93,
+  -2px 1px #cdd2d5,
+  -2px 3px #808d93,
+  -3px 2px #cdd2d5,
+  -3px 4px #808d93,
+  -4px 3px #cdd2d5,
+  -4px 5px #808d93,
+  -5px 4px #cdd2d5,
+  -5px 6px #808d93,
+  -6px 5px #cdd2d5,
+  -6px 7px #808d93,
+  -7px 6px #cdd2d5,
+  -7px 8px #808d93,
+  -8px 7px #cdd2d5;
+  }
+  .header{
+      top: 0;
+      margin: 0.5rem;
+     z-index: 999;
+    
+  }
+
+
+  
+  .navbar{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      font-family: gopherTas;
+  }
+  .hamburger{
+      display: none;
+  }
+  .bar{
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in-out;
+  background-color: #000;
+  font-weight: 800;
+  font-size: 2rem;
+  }
+  
+  
+  .nav-menu{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  li{
+  margin-left: 3rem;
+  list-style: none;
+  
+  }
+  
+  
+  li a{
+      font-size: 18px;
+      font-weight: 600;
+      transition: 0.3s ease;
+      color: #333;
+      text-transform: uppercase;
+  }
+   
+  .btn{
+      display: inline-block;
+      padding: .85rem 1rem;
+      background: #f899e3;
+      color: #fff;
+      text-transform: uppercase;
+      border: 1px solid #ffd4f6;
+      font-weight: 800;
+      font-size: 15px;
+      border-radius: 2rem;
+  }
+  .btn:hover{
+      background: #c76cb4;
+  }
+  .navbar li a:hover,
+  .navbar li a.active{
+      color: #f899e3;
+  }
+  /**NAVBAR media query*/
+  
+  @media only screen and (max-width:768px){
+      .nav-menu{
+          position: fixed;
+          left: -100%;
+          flex-direction: column;
+          background:#d8f8ff;
+          width: 100%;
+          top: 5rem;
+          border-radius: 10px;
+          transition: .3s ease-in;
+          box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+      }
+      .nav-menu.active{
+          left: 0;
+      }
+      li{
+          margin: 2.5rem 0;
+          list-style: none;
+      }
+      .hamburger{
+          display: block;
+          cursor: pointer;
+        margin-top: 2rem;
+       
+      }
+      
+     .logo{
+     text-align: center;
+     justify-content: center;
+      font-weight: 900;
+      font-size: 30px;
+      margin-top: 2rem;
+     }
+      .hamburger.active .bar:nth-child(2) {
+          opacity: 0;
+      }
+  
+      .hamburger.active .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+      }
+  
+      .hamburger.active .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+      }
+      
+  }
+
+
+
+  /***EXPLORE NFTS**/
+  .heading{
+    margin: 4rem auto;
+  }
+  .heading h2{
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    
+  }
+ .button{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+ }
+  .explore{
+    padding: 10px 45px;
+    background: #a4e5f3;
+    color: #000;
+    text-transform: uppercase;
+    border: 1px solid #c9f1fa;
+    font-weight: 800;
+    font-size: 15px;
+    border-radius: 45px;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+.explore:hover{
+    transform: scale(1.1);
+}
+.explore a{
+    text-decoration: none;
+    color: #000;
+}
+.explore:hover{
+    background: #c9f1fa;
+}
+.nft-1 h3{
+text-align: center;
+margin:0.5rem 0;
+}
+.nft-2 h3{
+    text-align: center;
+    margin: 0.5rem 0;
+}
+.nft{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+.nft button{
+    background: #000;
+    color: #fff;
+    border-radius: 45px;
+    width: 100px;
+    height: 35px;
+    margin: 0 auto;
+    cursor: pointer;
+    font-family: 'Playfair Display', serif;
+}
+.nft button:hover{
+    transform: scale(1.1);
+    background: rgb(39, 38, 38);
+}
+section{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+img{
+    width: 410px;
+    height: 520px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+img:hover{
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
+}
+
+@media only screen and (max-width:968px){
+   
+    img{
+        width: 150px;
+        height: 180px;
+        margin: 0 auto;
+    }
+    
+}
+.wrapper{
+    background: #a4e5f3;
+    border-radius: 20px;
+    
+    align-items: center;
+    justify-content: center;
+    margin: 4rem 2.5rem;
+}
+.wrapper p{
+    text-align: center;
+font-size: 30px;
+padding-top: 2rem;
+font-weight: 500;
+text-transform: uppercase;
+}
+.img-area{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background: #a4e5f3;
+}
+.single-img{
+    padding: 0 20px 20px;
+    margin-top: 3rem;
+}
+.single-img img{
+    height: 340px;
+    width: 305px;
+}
+.foundation{
+    padding-top: 6rem;
+}
+.found{
+    margin-top: 4rem;
+}
+
+.image1 img, .image2 img{
+    width: 410px;
+    height: 520px;
+    border-radius: 15px;
+    transition: .3s;
+}
+.image1 h3, .image2 h3, .image3{
+    text-align: center;
+    margin: 0.5rem 0;
+}
+.image1 img:hover, .image2 img:hover{
+    opacity: 0.3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+.image3{
+    margin-top: 4rem;
+}
+.big{
+width: 545px;
+height: 690px;
+margin: 0 auto;
+}
+.sisi{
+    padding-bottom: 1.5rem;
+}
+@media only screen and (max-width:968px){
+   
+   .image1 img, .image2 img{
+        width: 150px;
+        height: 180px;
+        margin: 0 auto;
+    }
+    .big{
+        width: 200px;
+        height: 270px;
+       
+    }
+}
