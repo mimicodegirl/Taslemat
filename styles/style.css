@@ -8,8 +8,9 @@
 body{
     background: conic-gradient(from 180deg at 50% 50%, #ffd4f6 -31.88deg, #d8f8ff 63.75deg,
      #ffd4f6 116.25deg, #d8f8ff 255deg, #ffd4f6 328.12deg, #d8f8ff 423.75deg);
-     transition: .3s;
+     
      font-family: 'Radio Canada', sans-serif;
+     animation: page-load 500ms ease-in;
 }
 
 li{
@@ -58,6 +59,7 @@ a{
     justify-content: space-around;
     align-items: center;
     padding: 1rem 1.5rem;
+    animation: nav-load 300ms ease-in;
 }
 .hamburger{
     display: none;
@@ -82,7 +84,11 @@ font-size: 2rem;
 }
 li{
 margin-left: 3rem;
-
+animation-name: nav-link-load;
+animation-duration: 500ms;
+animation-timing-function: ease-in;
+animation-delay: 300ms;
+animation-fill-mode: forwards;
 }
 
 
@@ -184,6 +190,7 @@ transform: scale(1.1);
     font-size: 2rem;
     line-height: 0.8;
     margin-bottom: 1rem;
+   
 }
 .header-title h1{
     font-weight: 600;
@@ -283,6 +290,10 @@ text-align: center;
         color: #000;
         text-transform: capitalize; 
         margin: 2rem;
+        animation: article-load 300ms ease-in 800ms;
+    animation-fill-mode: forwards;
+    transform: translateY(-20px);
+    opacity: 0;
 }
 .title h2{
 font-size: 30px;
@@ -346,6 +357,10 @@ font-weight: 900;
     font-weight: 500;
     text-transform: capitalize;
     margin-top: 0.2rem;
+    animation: article-load 300ms ease-in 800ms;
+    animation-fill-mode: forwards;
+    transform: translateY(-20px);
+    opacity: 0;
 }
 .feat-list:hover{
     transform: scale(1.1);
@@ -389,3 +404,34 @@ justify-content: space-between;
 .col-f{
     margin-bottom: 2em;
 }
+@keyframes nav-load{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes nav-link-load{
+    0%{
+        transform: scale(0);
+    }
+    90%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    
+    }
+}
+
+@keyframes page-load{
+    from{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    }

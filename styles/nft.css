@@ -8,8 +8,8 @@
 body{
     background: conic-gradient(from 180deg at 50% 50%, #ffd4f6 -31.88deg, #d8f8ff 63.75deg,
     #ffd4f6 116.25deg, #d8f8ff 255deg, #ffd4f6 328.12deg, #d8f8ff 423.75deg);
-    transition: 0.4s;
     font-family: 'Radio Canada', sans-serif;
+    animation: page-load 500ms;
 }
 li{
     list-style: none;
@@ -54,7 +54,7 @@ a{
       justify-content: space-around;
       align-items: center;
       padding: 1rem 1.5rem;
-      font-family: gopherTas;
+      animation: nav-load 300ms ease-in;
   }
   .hamburger{
       display: none;
@@ -80,7 +80,11 @@ a{
   li{
   margin-left: 3rem;
   list-style: none;
-  
+  animation-name: nav-link-load;
+      animation-duration: 500ms;
+      animation-timing-function: ease-in;
+      animation-delay: 300ms;
+      animation-fill-mode: forwards;
   }
   
   
@@ -163,13 +167,12 @@ a{
 
   /***EXPLORE NFTS**/
   .heading{
-    margin: 4rem auto;
+    margin: 2rem auto;
   }
   .heading h2{
     margin: 0 auto;
     text-align: center;
     text-transform: uppercase;
-    
   }
  .button{
     display: flex;
@@ -221,7 +224,8 @@ margin:0.5rem 0;
     height: 35px;
     margin: 0 auto;
     cursor: pointer;
-    font-family: 'Playfair Display', serif;
+    font-weight: 500;
+    font-size: 16px;
 }
 .nft button:hover{
     transform: scale(1.1);
@@ -248,8 +252,8 @@ img:hover{
 @media only screen and (max-width:968px){
    
     img{
-        width: 150px;
-        height: 180px;
+        width: 170px;
+        height: 250px;
         margin: 0 auto;
     }
     
@@ -282,14 +286,14 @@ text-transform: uppercase;
     margin-top: 3rem;
 }
 .single-img img{
-    height: 340px;
-    width: 305px;
+    height: 330px;
+    width: 300px;
 }
 .foundation{
-    padding-top: 6rem;
+    padding-top: 3rem;
 }
 .found{
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 .image1 img, .image2 img{
@@ -307,7 +311,7 @@ text-transform: uppercase;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 .image3{
-    margin-top: 4rem;
+    margin-top: 2.5rem;
 }
 .big{
 width: 545px;
@@ -317,11 +321,14 @@ margin: 0 auto;
 .sisi{
     padding-bottom: 1.5rem;
 }
+.object{
+    padding-top: 3rem;
+}
 @media only screen and (max-width:968px){
    
    .image1 img, .image2 img{
-        width: 150px;
-        height: 180px;
+        width: 180px;
+        height: 250px;
         margin: 0 auto;
     }
     .big{
@@ -329,4 +336,41 @@ margin: 0 auto;
         height: 270px;
        
     }
+    .vision img, .phases img{
+        width: 250px;
+        height: 270px;
+    }
+    .single-img img{
+        width: 250px;
+        height: 270px;
+    }
+}
+@keyframes nav-load{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+@keyframes nav-link-load{
+    0%{
+        transform: scale(0);
+    }
+    90%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes page-load{
+from{
+    opacity: 0;
+    transform: translateY(-10px);
+}
+to{
+    opacity: 1;
+    transform: translateY(0);
+}
 }
