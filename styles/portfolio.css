@@ -171,8 +171,8 @@ section{
     justify-content: space-around;
 }
 img{
-    width: 410px;
-    height: 520px;
+    width: 500px;
+    height: 575px;
     border-radius: 15px;
     transition: .3s;
 }
@@ -189,8 +189,8 @@ margin: 4rem auto;
 @media only screen and (max-width:968px){
    
     img{
-        width: 150px;
-        height: 180px;
+        width: 170px;
+        height: 200px;
         margin: 0 auto;
     }
     .big{
