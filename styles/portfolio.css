@@ -163,9 +163,9 @@ a{
 
 
 section{
+    
     margin-top: 3rem;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
@@ -189,14 +189,14 @@ margin: 4rem auto;
 @media only screen and (max-width:968px){
    
     img{
-        width: 170px;
-        height: 200px;
-        margin: 0 auto;
+       width: 300px;
+       height: 350px;
+        margin: 1rem auto;
     }
     .big{
-        width: 250px;
-        height: 300px;
-        margin: 3rem auto;
+       width: 350px;
+       height: 400px;
+        margin: 1rem auto;
     }
 }
 @keyframes nav-load{
